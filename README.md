@@ -1,4 +1,4 @@
-# 🌐 Projets HTML/CSS - TPs 1, 2 & 3
+#  Projets HTML/CSS - TPs 1, 2 & 3
 
 Bienvenue dans ce dépôt regroupant une série de travaux pratiques (TP) d'intégration web en HTML et CSS pur. Ces projets illustrent la progression de l'apprentissage du développement frontend, allant des bases de la structure HTML jusqu'au design moderne et "premium".
 
@@ -14,7 +14,7 @@ Ce dépôt contient trois dossiers principaux conçus de manière croissante en 
 
 ---
 
-## ✨ Focus sur le TP3 (Agence Digitale)
+##  Focus sur le TP3 (Agence Digitale)
 
 Le **TP3** est le projet le plus abouti et représentatif de ce dépôt. Il s'agit d'un site vitrine complet et professionnel pour une agence digitale, comprenant plusieurs pages détaillées :
 
@@ -24,7 +24,7 @@ Le **TP3** est le projet le plus abouti et représentatif de ce dépôt. Il s'ag
 *   `pages/gallery.html` : Portfolio des réalisations en format grille panoramique esthétique.
 *   `pages/contact.html` : Formulaire de contact fonctionnel et carte interactive.
 
-### 🎨 Technologies et Philosophie de Design (TP3)
+### Technologies et Philosophie de Design (TP3)
 *   **HTML5 / CSS3 pur** : Conception garantie 100% sans framework ni librairie externe.
 *   **Design Premium & Moderne** : Mode sombre (Dark mode) par défaut, dégradés subtils et animations dynamiques au survol (hover) pour une expérience utilisateur enrichie.
 *   **Typographie Soignée** : Utilisation de la police Google Fonts moderne *Inter* pour une lisibilité optimale.
@@ -33,5 +33,5 @@ Le **TP3** est le projet le plus abouti et représentatif de ce dépôt. Il s'ag
 
 ---
 
-## 👨‍💻 À propos de l'Auteur
+##  À propos de l'Auteur
 Projet créé, développé et maintenu dans le cadre d'un apprentissage rigoureux et perfectionnement continu en intégration Web HTML/CSS.

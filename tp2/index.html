@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire d'inscription</title>
+
+</head>
+
+<body>
+<h1>Formulaire d'inscription</h1>
+<form>
+
+<fieldset>
+<legend>Informations personnelles</legend>
+
+<label for="nom">Nom</label>
+<input type="text" id="nom" name="nom" required>
+
+<label for="prenom">Prénom</label>
+<input type="text" id="prenom" name="prenom" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<label for="telephone">Téléphone</label>
+<input type="tel" id="telephone" name="telephone" pattern="^(\+212|0)[1-9](\d{2}){4}$" placeholder="0612345678" required>
+
+<label for="date">Date de naissance</label>
+<input type="date" id="date" name="date" required max="2008-01-01">
+
+</fieldset>
+
+<fieldset>
+<legend>Sécurité</legend>
+
+<label for="password">Mot de passe</label>
+<input type="password" id="password" name="password"
+pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" required>
+
+<label for="confirm">Confirmation du mot de passe</label>
+<input type="password" id="confirm" name="confirm" required>
+
+</fieldset>
+
+<fieldset>
+<legend>Profil</legend>
+
+<label>Pays</label>
+<input list="pays" name="pays" required>
+
+<datalist id="pays">
+<option value="France">
+<option value="Maroc">
+<option value="Belgique">
+<option value="Canada">
+<option value="Suisse">
+</datalist>
+
+<label>Genre</label>
+
+<label>
+<input class="inline" type="radio" name="genre" value="homme" required>
+Homme
+</label>
+
+<label>
+<input class="inline" type="radio" name="genre" value="femme">
+Femme
+</label>
+
+<label>
+<input class="inline" type="radio" name="genre" value="autre">
+Autre
+</label>
+
+<label>Centres d'intérêt</label>
+<label><input class="inline" type="checkbox" name="interet" value="dev"> Développement</label>
+<label><input class="inline" type="checkbox" name="interet" value="design"> Design</label>
+<label><input class="inline" type="checkbox" name="interet" value="ia"> Intelligence Artificielle</label>
+<label><input class="inline" type="checkbox" name="interet" value="data"> Data Science</label>
+
+
+<label for="bio">Biographie</label>
+<textarea id="bio" name="bio" maxlength="300" rows="4"
+placeholder="Maximum 300 caractères"></textarea>
+
+
+<label for="photo">Photo de profil</label>
+<input type="file" id="photo" name="photo" accept="image/*">
+
+</fieldset>
+
+<fieldset>
+<legend>Conditions</legend>
+
+<label>
+<input class="inline" type="checkbox" required>
+J'accepte les conditions générales d'utilisation
+</label>
+
+</fieldset>
+
+<button type="submit">S'inscrire</button>
+
+</form>
+
+</body>
+</html>
