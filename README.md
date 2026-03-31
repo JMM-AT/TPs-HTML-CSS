@@ -36,7 +36,7 @@ Pages présentes:
 
 ---
 
-## 🛠️ Technologies utilisées
+##  Technologies utilisées
 
 - HTML5
 - CSS3 (Flexbox, Grid, variables CSS, animations, transitions)
@@ -44,7 +44,7 @@ Pages présentes:
 
 ---
 
-## ▶ Exécution
+##  Exécution
 
 1. Ouvrir le fichier HTML dans un navigateur (double-clic ou via la commande `Live Server`).
 2. Pour une meilleure expérience, utiliser un serveur local (ex: Visual Studio Code `Live Server`).
