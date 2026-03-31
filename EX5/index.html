@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICE 5:</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>EXERCICE 5:</h1>
+    <h2>Mobile First</h2>
+    <p>Transformez cette page pour qu'elle soit responsive (mobile first) :</p>
+    <textarea class="code-editor" rows="10" readonly>
+        .container {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+    </textarea>
+    <h2>solution :</h2>
+    <textarea class="code-editor" rows="10" readonly>
+        <!-- Tablette -->
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                flex-direction: row;
+            }
+            .container {
+                max-width: 750px;
+                margin: 0 auto;
+            }
+            .content{
+                display: flex;
+                gap: 20px;
+                grid-template-columns: 1fr 2fr;
+            }
+            .sidebar{
+                display: block;
+            }
+        }
+        <!-- Desktop -->
+        @media (min-width: 992px) {
+            .container {
+                max-width: 970px;
+            }
+            .content{
+                grid-template-columns: 1fr 3fr;
+            }
+        }
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1170px;
+            }
+        }
+    </textarea>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 >Exercice 1 : Sélecteurs et spécificité (20 min)</h2>
+
+<h3 >1.1 Sélecteurs</h3>
+
+<p>Étant donné le HTML suivant, écrivez les sélecteurs CSS demandés :</p>
+
+<textarea class="code-editor" rows="10" cols="20">&lt;nav class="main-nav"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/" class="active"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;À propos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;
+    &lt;article class="post featured"&gt;
+        &lt;h2&gt;Premier article&lt;/h2&gt;
+        &lt;p&gt;Contenu...&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;article class="post"&gt;
+        &lt;h2&gt;Deuxième article&lt;/h2&gt;
+        &lt;p&gt;Contenu...&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;/main&gt;
+</textarea>
+
+<p><strong>Questions :</strong></p>
+
+<ol class="mb-3">
+<li>Sélectionnez tous les liens dans la navigation</li>
+<li>Sélectionnez uniquement le lien actif</li>
+<li>Sélectionnez l'article qui a la classe <code>featured</code></li>
+<li>Sélectionnez le premier paragraphe de chaque article</li>
+<li>Sélectionnez les éléments <code>&lt;li&gt;</code> pairs</li>
+</ol>
+<p><strong>Solution :</strong></p>
+<textarea class="code-editor" rows="10" cols="20">
+    /* 1er question */
+    .main-nav a{
+        color: blue;
+    }
+    /* 2eme question */
+    a:active{
+        color: red;
+    }
+    /* 3eme question */
+    .featured{
+        background-color: #eee;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    /* 4eme question */
+    article p:first-child{
+        font-size: 1.2em;
+    }
+    /* 5eme question */
+    li:nth-of-type(even){
+        background-color: #eee;
+    }
+</textarea>
+
+<h3 class="text-secondary mt-3 mb-2">1.2 Spécificité</h3>
+
+<p><strong>Questions :</strong></p>
+
+<ol class="mb-3">
+<li>Classez ces sélecteurs par spécificité croissante : <code>p</code>, <code>.text</code>, <code>#main</code>, <code>p.text</code>, <code>#main .text p</code></li>
+<li>Si deux règles ont la même spécificité, laquelle gagne ?</li>
+<li>Pourquoi faut-il éviter <code>!important</code> ?</li>
+</ol>
+
+</body>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Exercice 2: Box Model</h1>
+
+<h3>2.1 Comprendre le Box Model</h3>
+
+<textarea class="code-editor" rows="10" readonly>
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #333;
+    margin: 15px;
+}
+
+Avec box-sizing: content-box, la largeur totale est :
+300 + (2 * 20) + (2 * 5) = 350px
+
+Avec box-sizing: border-box, la largeur reste :
+300px
+</textarea>
+
+<h3>2.2 Centrer un élément</h3>
+<div class="p">
+    <div class="parent">
+        <div class="centrer"></div>
+    </div>
+
+    <textarea class="code-editor" rows="10" readonly>
+    .parent {
+        width: 500px;
+        height: 500px;
+        background-color: #355;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centrer {
+        width: 100px;
+        height: 100px;
+        background-color: #333;
+    }
+    </textarea>
+</div>
+</body>
+</html>
