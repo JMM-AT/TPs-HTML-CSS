@@ -2,13 +2,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2 >Exercice 1 : Sélecteurs et spécificité (20 min)</h2>
+    <h2>Exercice 1 : Sélecteurs et spécificité (20 min)</h2>
 
-<h3 >1.1 Sélecteurs</h3>
+    <h3>1.1 Sélecteurs</h3>
 
-<p>Étant donné le HTML suivant, écrivez les sélecteurs CSS demandés :</p>
+    <p>Étant donné le HTML suivant, écrivez les sélecteurs CSS demandés :</p>
 
-<textarea class="code-editor" rows="10" cols="20">&lt;nav class="main-nav"&gt;
+    <textarea class="code-editor" rows="10" cols="20">&lt;nav class="main-nav"&gt;
     &lt;ul&gt;
         &lt;li&gt;&lt;a href="/" class="active"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href="/about"&gt;À propos&lt;/a&gt;&lt;/li&gt;
@@ -27,49 +27,76 @@
     &lt;/main&gt;
 </textarea>
 
-<p><strong>Questions :</strong></p>
+    <p><strong>Questions :</strong></p>
 
-<ol class="mb-3">
-<li>Sélectionnez tous les liens dans la navigation</li>
-<li>Sélectionnez uniquement le lien actif</li>
-<li>Sélectionnez l'article qui a la classe <code>featured</code></li>
-<li>Sélectionnez le premier paragraphe de chaque article</li>
-<li>Sélectionnez les éléments <code>&lt;li&gt;</code> pairs</li>
-</ol>
-<p><strong>Solution :</strong></p>
-<textarea class="code-editor" rows="10" cols="20">
+    <ol class="mb-3">
+        <li>Sélectionnez tous les liens dans la navigation</li>
+        <li>Sélectionnez uniquement le lien actif</li>
+        <li>Sélectionnez l'article qui a la classe <code>featured</code></li>
+        <li>Sélectionnez le premier paragraphe de chaque article</li>
+        <li>Sélectionnez les éléments <code>&lt;li&gt;</code> pairs</li>
+    </ol>
+
+    <p><strong>Solution :</strong></p>
+    <textarea class="code-editor" rows="10" cols="20">
     /* 1er question */
-    .main-nav a{
+    .main-nav a {
         color: blue;
     }
     /* 2eme question */
-    a:active{
+    a:active {
         color: red;
     }
     /* 3eme question */
-    .featured{
+    .featured {
         background-color: #eee;
         padding: 20px;
         margin-top: 20px;
     }
     /* 4eme question */
-    article p:first-child{
+    article p:first-child {
         font-size: 1.2em;
     }
     /* 5eme question */
-    li:nth-of-type(even){
+    li:nth-of-type(even) {
         background-color: #eee;
     }
 </textarea>
 
-<h3 class="text-secondary mt-3 mb-2">1.2 Spécificité</h3>
+    <h3 class="text-secondary mt-3 mb-2">1.2 Spécificité</h3>
 
-<p><strong>Questions :</strong></p>
+    <p><strong>Questions :</strong></p>
 
-<ol class="mb-3">
-<li>Classez ces sélecteurs par spécificité croissante : <code>p</code>, <code>.text</code>, <code>#main</code>, <code>p.text</code>, <code>#main .text p</code></li>
-<li>Si deux règles ont la même spécificité, laquelle gagne ?</li>
-<li>Pourquoi faut-il éviter <code>!important</code> ?</li>
-</ol>
+    <ol class="mb-3">
+        <li>Classez ces sélecteurs par spécificité croissante : <code>p</code>, <code>.text</code>, <code>#main</code>, <code>p.text</code>, <code>#main .text p</code></li>
+        <li>Si deux règles ont la même spécificité, laquelle gagne ?</li>
+        <li>Pourquoi faut-il éviter <code>!important</code> ?</li>
+    </ol>
+
+    <p><strong>Correction :</strong></p>
+
+    <ol>
+        <li>
+            <strong>Classement par spécificité croissante :</strong><br>
+            <code>p</code> (0,0,1)
+            → <code>.text</code> (0,1,0)
+            → <code>p.text</code> (0,1,1)
+            → <code>#main</code> (1,0,0)
+            → <code>#main .text p</code> (1,1,1)
+        </li>
+        <li>
+            <strong>En cas d'égalité de spécificité :</strong><br>
+            C'est la règle déclarée <strong>en dernier</strong> dans le CSS qui l'emporte (principe de la cascade).
+        </li>
+        <li>
+            <strong>Pourquoi éviter <code>!important</code> :</strong>
+            <ul>
+                <li>Il court-circuite toute la cascade CSS et rend le code imprévisible.</li>
+                <li>Il est difficile à surcharger : il faut un autre <code>!important</code> de spécificité plus haute.</li>
+                <li>Il complique la maintenance et le débogage du CSS.</li>
+                <li>Son usage excessif révèle souvent une mauvaise architecture CSS.</li>
+            </ul>
+        </li>
+    </ol>
 
 </body>
